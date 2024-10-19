@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tablas disponibles</title>
+</head>
+<body>
+    <h1>Tablas accesibles</h1>
+    <ul>
+        {% for table in tables %}
+        <li><a href="{{ url_for('view_table', table_name=table[0], username=username, password=password) }}">{{ table[0] }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

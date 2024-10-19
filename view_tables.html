@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabla {{ table_name }}</title>
+</head>
+<body>
+    <h1>Registros de la tabla: {{ table_name }}</h1>
+    <table border="1">
+        <tr>
+            {% for column in columns %}
+            <th>{{ column }}</th>
+            {% endfor %}
+        </tr>
+        {% for record in records %}
+        <tr>
+            {% for value in record %}
+            <td>{{ value }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
